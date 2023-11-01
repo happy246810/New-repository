@@ -1,69 +1,63 @@
-let myGraph2=document.getElementById('myGraph2');
-let trace1 ={};
-trace1.type ="bar";
-trace1.name ="0-14歲人口比例";
-trace1.x =[];
-trace1.y =[];
+let myGraph2 = document.getElementById('myGraph2');
+let hw2_trace1 ={};
+hw2_trace1.type ="bar";
+hw2_trace1.name ="第一產業（農、林、漁、牧業）";
+hw2_trace1.x =[];
+hw2_trace1.y =[];
 
-trace1.x[0] = "中國的人口年齡分布";
-trace1.y[0] = 中國的人口[0]['count'];
-trace1.x[1] = "日本的人口年齡分布";
-trace1.y[1] = 日本的人口[0]['count'];
-trace1.x[2] = "南韓的人口年齡分布";
-trace1.y[2] = 南韓的人口[0]['count'];
-trace1.x[3] = "北韓的人口年齡分布";
-trace1.y[3] = 北韓的人口[0]['count'];
-trace1.x[4] = "臺灣的人口年齡分布";
-trace1.y[4] = 臺灣的人口[0]['count'];
+hw2_trace1.x[0] = "中國的職業人口分布";
+hw2_trace1.y[0] = 中國的職業人口[0]['count'];
+hw2_trace1.x[1] = "日本的職業人口分布";
+hw2_trace1.y[1] = 日本的職業人口[0]['count'];
+hw2_trace1.x[2] = "南韓的職業人口分布";
+hw2_trace1.y[2] = 南韓的職業人口[0]['count'];
+hw2_trace1.x[3] = "臺灣的職業人口分布";
+hw2_trace1.y[3] = 臺灣的職業人口[0]['count'];
 
-trace1.text = trace1.y;
-trace1.textfont = {
+hw2_trace1.text = hw2_trace1.y;
+hw2_trace1.textfont = {
     color: 'white',
     size:20
 };
 
-let trace2 ={};
-trace2.type ="bar";
-trace2.name ="15-64歲人口比例";
-trace2.x =[];
-trace2.y =[];
+let hw2_trace2 ={};
+hw2_trace2.type ="bar";
+hw2_trace2.name ="第二產業（工業製造業";
+hw2_trace2.x =[];
+hw2_trace2.y =[];
 
-trace2.x[0] = "中國的人口年齡分布";
-trace2.y[0] = 中國的人口[1]['count'];
-trace2.x[1] = "日本的人口年齡分布";
-trace2.y[1] = 日本的人口[1]['count'];
-trace2.x[2] = "南韓的人口年齡分布";
-trace2.y[2] = 南韓的人口[1]['count'];
-trace2.x[3] = "北韓的人口年齡分布";
-trace2.y[3] = 北韓的人口[1]['count'];
-trace2.x[4] = "臺灣的人口年齡分布";
-trace2.y[4] = 臺灣的人口[1]['count'];
+hw2_trace2.x[0] = "中國的職業人口分布";
+hw2_trace2.y[0] = 中國的職業人口[1]['count'];
+hw2_trace2.x[1] = "日本的職業人口分布";
+hw2_trace2.y[1] = 日本的職業人口[1]['count'];
+hw2_trace2.x[2] = "南韓的職業人口分布";
+hw2_trace2.y[2] = 南韓的職業人口[1]['count'];
+hw2_trace2.x[3] = "臺灣的職業人口分布";
+hw2_trace2.y[3] = 臺灣的職業人口[1]['count'];
 
-trace2.text = trace2.y;
-trace2.textfont = {
+hw2_trace2.text = hw2_trace2.y;
+hw2_trace2.textfont = {
     color: 'white',
     size:20
 };
 
-let trace3 ={};
-trace3.type ="bar";
-trace3.name ="64歲以上人口比例";
-trace3.x =[];
-trace3.y =[];
+let hw2_trace3 ={};
+hw2_trace3.type ="bar";
+hw2_trace3.name ="第三產業（服務業）";
+hw2_trace3.x =[];
+hw2_trace3.y =[];
 
-trace3.x[0] = "中國的人口年齡分布";
-trace3.y[0] = 中國的人口[2]['count'];
-trace3.x[1] = "日本的人口年齡分布";
-trace3.y[1] = 日本的人口[2]['count'];
-trace3.x[2] = "南韓的人口年齡分布";
-trace3.y[2] = 南韓的人口[2]['count'];
-trace3.x[3] = "北韓的人口年齡分布";
-trace3.y[3] = 北韓的人口[2]['count'];
-trace3.x[4] = "臺灣的人口年齡分布";
-trace3.y[4] = 臺灣的人口[2]['count'];
+hw2_trace3.x[0] = "中國的職業人口分布";
+hw2_trace3.y[0] = 中國的職業人口[2]['count'];
+hw2_trace3.x[1] = "日本的職業人口分布";
+hw2_trace3.y[1] = 日本的職業人口[2]['count'];
+hw2_trace3.x[2] = "南韓的職業人口分布";
+hw2_trace3.y[2] = 南韓的職業人口[2]['count'];
+hw2_trace3.x[3] = "臺灣的職業人口分布";
+hw2_trace3.y[3] = 臺灣的職業人口[2]['count'];
 
-trace3.text = trace3.y;
-trace3.textfont = {
+hw2_trace3.text = hw2_trace3.y;
+hw2_trace3.textfont = {
     color: 'white',
     size:20
 };
@@ -91,15 +85,15 @@ trace3.textfont = {
     //trace2.x[i] =animals_Taoyuan_Zoo[i]['name'];
     //trace2.y[i] =animals_Taoyuan_Zoo[i]['count'];
 //}
-let data =[];
-data.push(trace1);
-data.push(trace2);
-data.push(trace3);
-let layout ={
+let data2 =[];
+data2.push(hw2_trace1);
+data2.push(hw2_trace2);
+data2.push(hw2_trace3);
+let layout2 ={
     margin:{
         t:50
     },
-    title:"各國人口年齡分布",
-   // barmode:"stack"
+    title:"臺灣鄰國職業人口分布",
+    barmode:"stack"
 };
-Plotly.newPlot(myGraph2, data, layout);
+Plotly.newPlot(myGraph2, data2, layout2);

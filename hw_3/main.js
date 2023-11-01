@@ -1,83 +1,101 @@
-let myGraph=document.getElementById('myGraph');
+let myGraph3=document.getElementById('myGraph3');
 
-let trace1 ={};
-trace1.type ="pie";
-trace1.title = "機器學習概論";
-trace1.labels =[];
-trace1.values =[];
-trace1.domain = {
+let hw3_trace1 ={};
+hw3_trace1.type ="pie";
+hw3_trace1.title = "中國的人口年齡分布";
+hw3_trace1.labels =[];
+hw3_trace1.values =[];
+hw3_trace1.domain = {
     row: 0,
     column: 0
 };
 
-for(let x = 0;x <機器學習概論.length; x++)
+for(let x = 0;x <中國的人口.length; x++)
 {
-    trace1.labels[x] = 機器學習概論[x]["name"];
-    trace1.values[x] = 機器學習概論[x]["count"];
+    hw3_trace1.labels[x] = 中國的人口[x]["name"];
+    hw3_trace1.values[x] = 中國的人口[x]["count"];
 }
 
-let trace2 ={};
-trace2.type ="pie";
-trace2.title = "資料視覺化";
-trace2.labels =[];
-trace2.values =[];
-trace2.domain = {
+let hw3_trace2 ={};
+hw3_trace2.type ="pie";
+hw3_trace2.title ="日本的人口年齡分布" ;
+hw3_trace2.labels =[];
+hw3_trace2.values =[];
+hw3_trace2.domain = {
     row: 0,
     column: 1
 };
 
-for(let x = 0;x <資料視覺化.length; x++)
+for(let x = 0;x <日本的人口.length; x++)
 {
-    trace2.labels[x] = 資料視覺化[x]["name"];
-    trace2.values[x] = 資料視覺化[x]["count"];
+    hw3_trace2.labels[x] = 日本的人口[x]["name"];
+    hw3_trace2.values[x] = 日本的人口[x]["count"];
 }
 
-let trace3 ={};
-trace3.type ="pie";
-trace3.title = "人工智慧與永續發展";
-trace3.labels =[];
-trace3.values =[];
-trace3.domain = {
+let hw3_trace3 ={};
+hw3_trace3.type ="pie";
+hw3_trace3.title = "南韓的人口年齡分布";
+hw3_trace3.labels =[];
+hw3_trace3.values =[];
+hw3_trace3.domain = {
     row: 1,
     column: 0
 };
 
-for(let x = 0;x <人工智慧與永續發展.length; x++)
+for(let x = 0;x <南韓的人口.length; x++)
 {
-    trace3.labels[x] = 人工智慧與永續發展[x]["name"];
-    trace3.values[x] = 人工智慧與永續發展[x]["count"];
+    hw3_trace3.labels[x] = 南韓的人口[x]["name"];
+    hw3_trace3.values[x] = 南韓的人口[x]["count"];
 }
 
-let trace4 ={};
-trace4.type ="pie";
-trace4.title = "Python程式設計";
-trace4.labels =[];
-trace4.values =[];
-trace4.domain = {
+let hw3_trace4 ={};
+hw3_trace4.type ="pie";
+hw3_trace4.title = "北韓的人口年齡分布";
+hw3_trace4.labels =[];
+hw3_trace4.values =[];
+hw3_trace4.domain = {
     row: 1,
     column: 1
 };
 
-for(let x = 0;x <Python程式設計.length; x++)
+for(let x = 0;x <北韓的人口.length; x++)
 {
-    trace4.labels[x] = Python程式設計[x]["name"];
-    trace4.values[x] = Python程式設計[x]["count"];
+    hw3_trace4.labels[x] = 北韓的人口[x]["name"];
+    hw3_trace4.values[x] = 北韓的人口[x]["count"];
 }
 
-let data =[];
-data.push(trace1);
-data.push(trace2);
-data.push(trace3);
-data.push(trace4);
-let layout ={
+let hw3_trace5 ={};
+hw3_trace5.type ="pie";
+hw3_trace5.title = "臺灣的人口年齡分布";
+hw3_trace5.labels =[];
+hw3_trace5.values =[];
+hw3_trace5.domain = {
+    row: 0,
+    column:2
+};
+
+for(let x = 0;x <臺灣的人口.length; x++)
+{
+    hw3_trace5.labels[x] = 臺灣的人口[x]["name"];
+    hw3_trace5.values[x] = 臺灣的人口[x]["count"];
+}
+
+let data3 =[];
+data3.push(hw3_trace1);
+data3.push(hw3_trace2);
+data3.push(hw3_trace3);
+data3.push(hw3_trace4);
+data3.push(hw3_trace5);
+let layout3 ={
     margin:{
-        t:10,
+        t:30,
         l:0,
     },
     grid:{
         rows: 2,
-        columns: 2
-    }
+        columns: 3
+    },
+    title:"臺灣鄰國人口年齡分布",
 };
 
-Plotly.newPlot(myGraph, data, layout);
+Plotly.newPlot(myGraph3, data3, layout3);
